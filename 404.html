@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Morsalin Islam Alvee</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Redirect to home page with hash
+    window.onload = function() {
+      const path = window.location.pathname;
+      const section = path.split('/').pop().replace('.html', '');
+      
+      if (['bio', 'skills', 'education', 'projects', 'contact'].includes(section)) {
+        window.location.href = '/#' + section;
+      } else {
+        window.location.href = '/';
+      }
+    };
+  </script>
+</head>
+<body class="bg-black text-white flex items-center justify-center h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 text-transparent bg-clip-text mb-4">
+      Redirecting...
+    </h1>
+    <p class="text-gray-400">Taking you to the portfolio</p>
+  </div>
+</body>
+</html>
+
